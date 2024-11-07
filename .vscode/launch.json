@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/repos/competitive_programming/theory",
-      "program": "d:/repos/competitive_programming/theory/build/Debug/outDebug",
+      "cwd": "c:/Storage/repos/competitive_programming/theory",
+      "program": "c:/Storage/repos/competitive_programming/theory/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
