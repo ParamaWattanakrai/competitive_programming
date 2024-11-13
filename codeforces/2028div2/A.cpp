@@ -4,6 +4,9 @@
 using namespace std;
 
 void walk() {
+    int x = 0;
+    int y = 0;
+
     string input;
     getline(cin, input);
     vector<string> splitinput;
@@ -12,45 +15,36 @@ void walk() {
     while (getline(iss, s, ' ')) {
         splitinput.push_back(s);
     }
+
     int moveCount = stoi(splitinput[0]);
-    int x = stoi(splitinput[1]);
-    int y = stoi(splitinput[2]);
-    int passCoord[(moveCount*2)+1][2] = {0};
+    int a = stoi(splitinput[1]);
+    int b = stoi(splitinput[2]);
+
     string moves;
     getline(cin, moves);
-    for (int i = 0; i < moveCount*2; i++) {
-        switch(moves[i]) {
+    for (int i = 0; i < 100; i++) {
+        for (int j = 0; j < moveCount; j++) {
+        switch(moves[j]) {
             case 'N':
-                passCoord[i][1]++;
+                y++;
                 break;
             case 'E':
-                passCoord[i][0]++;
+                x++;
                 break;
             case 'S':
-                passCoord[i][1]--;
+                y--;
                 break;
             case 'W':
-                passCoord[i][0]--;
+                x--;
                 break;
         }
-        passCoord[i+1][0] = passCoord[i][0];
-        passCoord[i+1][1] = passCoord[i][1];
-    }
-    bool meet = false;
-    for (int i = 0; i < moveCount; i++) {
-        int deltaX = passCoord[i*2][0] - passCoord[i][0];
-        int deltaY = passCoord[i*2][1] - passCoord[i][1];
-        double slopeMove = deltaY / deltaX;
-        double slopePoint = x / y;
-        if ((slopePoint == slopeMove) && ((deltaX != 0 && deltaY != 0) && (x % deltaX == 0 && y & deltaY == 0) && (x / deltaX == y / deltaY))) {
-            meet = true;
+        if (x == a && b == y) {
+            cout << "YES" << endl;
+            return;
+        }
         }
     }
-    if (meet) {
-        cout << "YES" << endl;
-    } else {
-        cout << "NO" << endl;
-    }
+    cout << "NO" << endl;
 }
 
 int main() {
