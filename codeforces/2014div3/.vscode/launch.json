@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Storage/repos/competitive_programming/leetcode",
-      "program": "c:/Storage/repos/competitive_programming/leetcode/build/Debug/outDebug",
+      "cwd": "c:/Storage/repos/competitive_programming/codeforces/2014div3",
+      "program": "c:/Storage/repos/competitive_programming/codeforces/2014div3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
